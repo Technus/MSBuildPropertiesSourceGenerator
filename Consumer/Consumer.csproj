@@ -6,12 +6,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<RootNamespace>Genny</RootNamespace>
+	  <YeetAttribute>Nope</YeetAttribute>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Generator\Generator.csproj"
-                      OutputItemType="Analyzer"
-					  ReferenceOutputAssembly="false"/>
+    <ProjectReference Include="..\AssemblyAttributes\AssemblyAttributes.csproj" />
+    <ProjectReference Include="..\Generator\Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
+
+	<ItemGroup>
+		<AssemblyAttribute Include="AssemblyAttributes.YeetAttribute">
+			<_Parameter1>$(YeetAttribute)</_Parameter1>
+		</AssemblyAttribute>
+	</ItemGroup>
 
 </Project>
